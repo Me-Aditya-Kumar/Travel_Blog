@@ -6,7 +6,7 @@ echo $blogger_photo_url = $_POST['photo_url'];
 echo $blogger_twitter_url= $_POST['twitter_url'];
 echo $blogger_facebook_url = $_POST['facebook_url'];
 echo $blogger_instagram_url = $_POST['instagram_url'];
-$conn = mysqli_connect('129.154.240.37', 'aditya', 'password', 'database',3306) or die('Connection failed');
+$conn = mysqli_connect() or die('Connection failed');
 $sql = " INSERT INTO bloggers(blogger_name,blogger_join_date,blogger_photo_url,blogger_twitter_url,blogger_facebook_url,blogger_instagram_url) VALUES ('{$blogger_name}','{$blogger_date}','{$blogger_photo_url}','{$blogger_twitter_url}','{$blogger_facebook_url}','{$blogger_instagram_url}') ";
 $result = mysqli_query($conn, $sql) or die("Query unsuccessful");
 header("Location: https://localhost/bloggers.php");
