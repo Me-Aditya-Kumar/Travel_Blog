@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['post'])){
-$conn = mysqli_connect('129.154.240.37', 'aditya', 'password', 'database',3306) or die('Connection failed');
+$conn = mysqli_connect() or die('Connection failed');
 echo $photo_title = $_POST['title'];
 echo $photo_url = $_POST['photo_url'];
 echo $photo_date = $_POST['date'];
