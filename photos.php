@@ -103,7 +103,7 @@
     <div class="con">
         <div class="row">
             <?php
-            $conn = mysqli_connect('129.154.240.37', 'aditya', 'password', 'database',3306) or die('Connection failed');
+            $conn = mysqli_connect() or die('Connection failed');
             $sql = "SELECT * FROM photos";
             $result = mysqli_query($conn, $sql) or die("Query unsuccessful");
             if (mysqli_num_rows($result) > 0) {
